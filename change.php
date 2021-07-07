@@ -114,35 +114,42 @@ $stmt = $db->query("select  * from woningen WHERE id = $id")->fetch();
             </td>
 
             <tr>
+                <td>
+                    Oppervlakte
+                </td>
+                <td>
+                    <input type="text" name="titel" placeholder="<?php echo $stmt['oppervlakte']?>"><br/>
+                </td>
+            </tr>
+
+            <?php
+            $type = $stmt['type']
+            ?>
+
+            <tr>
             <td>
                 Type
             </td>
             <td>
-                <input type="text" name="type" placeholder="<?php echo $stmt['type']?>"><br/>
+                <input type="radio" name="type" value="0" <?php if ($type == '0') echo 'checked="checked"'; ?>>
+                <label>Huis</label>
+                <input type="radio" name="type" value="1" <?php if ($type == '1') echo 'checked="checked"'; ?>>
+                <label>Appartement</label>
             </td>
             </tr>
 
-            <tr>
-            <td>
-                Titel
-            </td>
-            <td>
-                <input type="text" name="status" placeholder="<?php echo $stmt['status']?>"><br/>
-            </td>
-            </tr>
+            <?php
+            $status = $stmt['status'];
+            ?>
 
             <tr>
                 <td>
                     Status
                 </td>
-
-                <?php
-                $status = 
-                ?>
                 <td>
-                    <input type="radio" name="status" value="0">
+                    <input type="radio" name="status" value="0" <?php if ($status == '0') echo 'checked="checked"'; ?> />
                     <label>beschikbaar</label>
-                    <input type="radio" name="status" value="1">
+                    <input type="radio" name="status" value="1" <?php if ($status == '1') echo 'checked="checked"'; ?>>
                     <label>verkocht</label>
                 </td>
             </tr>
@@ -172,7 +179,7 @@ $db = mysqli_select_db($connection, 'mentemedia_huizen');
 if (isset($_POST['update']))
 {
 
-    $query = "UPDATE `woningen` SET titel='$_POST[titel]' where id='$_GET[id]'";
+    $query = "UPDATE `woningen` SET titel='$_POST[titel]', adres='$_POST[adres]', postcode='$_POST[postcode]', plaats='$_POST[plaats]', prijs='$_POST[prijs]', kamers='$_POST[kamers]', type='$_POST[type]', oppervlakte='$_POST[oppervlakte]', status='$_POST[status]'   where id='$_GET[id]'";
     $query_run = mysqli_query($connection,$query);
 
     if ($query_run)
