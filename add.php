@@ -1,6 +1,4 @@
-<!-- aanmaak datum: 15/01/2021, 10:16. author: Mohamad Dian Bah
-Revision history
-0.1            00/00/2030  Mohamad Dian  update ect...-->
+
 
 <?php
 

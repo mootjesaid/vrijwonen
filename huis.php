@@ -20,7 +20,7 @@
             <a href="index.php"><div class="logo">&#9650<span>VRIJ WONEN</span> </div></a>
             <div class="menu">
                 <ul>
-                    <li><a href="zoek.php?type=2">HUIS</a></li>
+                    <li><a href="zoek.php?type=0">HUIS</a></li>
                     <li><a href="zoek.php?type=1">APPARTEMENT</a></li>
                 </ul>
             </div>
