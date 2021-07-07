@@ -1,0 +1,28 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+.logo-info {
+    font-size: 2.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+
+}
+.logo-info span {
+    font-size: 2rem;
+    font-weight: bold;
+    vertical-align:10px;
+}
+
+.logo {
+    float: left;
+}
+
+.adres {
+    font-size: 1rem;
+}
